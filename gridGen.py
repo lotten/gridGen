@@ -1,4 +1,14 @@
 #!/usr/bin/python
+"""
+gridGen
+by Lars Otten <lotten@uci.edu>, 2016.
+
+Python script that generates grid-shaped graphical models in UAI file format.
+
+Usage:
+$ gridGen.py N [det]
+where N is grid size (N x N) and det (optionally) is the level of forced determinism.
+"""
 
 import sys
 import os
