@@ -14,6 +14,7 @@ import sys
 import os
 import random
 
+DEFAULT_DETERMINISM = .1
 DOMAIN_SIZE = 2
 NETWORK_TYPE = 'MARKOV'
 FLOAT_FORMAT = '%.3f'
@@ -57,7 +58,7 @@ if __name__ == '__main__':
     print 'Need to specify grid size and (optionally) level of determinism.'
   else:
     size = int(sys.argv[1])
-    determinism = float(sys.argv[2]) if len(sys.argv) > 2 else .5
+    determinism = float(sys.argv[2]) if len(sys.argv) > 2 else DEFAULT_DETERMINISM
     if determinism < 0 or determinism > 1:
       print 'Invalid determinism value %f, required within [0,1].' % determinism
     else:
